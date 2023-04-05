@@ -1,0 +1,27 @@
+@media (min-width:64em) {
+    .nav-container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.nav-container {
+  padding: 1.6rem;
+  justify-content: space-between;
+}
+
+.link {
+    position: relative;
+    width: 15rem;
+    height: 2rem;
+    display: block;
+}
+
+.list{
+    list-style: none;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
