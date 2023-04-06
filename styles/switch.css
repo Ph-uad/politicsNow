@@ -1,9 +1,9 @@
 .switch {
-    font-size: 17px;
+    font-size: 1.7rem;
     position: relative;
     display: inline-block;
-    width: 64px;
-    height: 34px;
+    width: 6.4rem;
+    height: 3.4rem;
   }
   
   .switch input {
@@ -11,6 +11,10 @@
     width: 0;
     height: 0;
   }
+
+  /* .switch{
+
+  } */
   
   .slider {
     position: absolute;
@@ -21,17 +25,17 @@
     bottom: 0;
     background-color: #73C0FC;
     transition: .4s;
-    border-radius: 30px;
+    border-radius: 3rem;
   }
   
   .slider:before {
     position: absolute;
     content: "";
-    height: 30px;
-    width: 30px;
+    height: 3rem;
+    width: 3rem;
     border-radius: 20px;
-    left: 2px;
-    bottom: 2px;
+    left: .2rem;
+    bottom: .2rem;
     z-index: 2;
     background-color: #e8e8e8;
     transition: .4s;
@@ -39,21 +43,21 @@
   
   .sun svg {
     position: absolute;
-    top: 6px;
-    left: 36px;
+    top: .6rem;
+    left: 3.6rem;
     z-index: 1;
-    width: 24px;
-    height: 24px;
+    width: 2.4rem;
+    height: 2.4rem;
   }
   
   .moon svg {
     fill: #73C0FC;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: .5rem;
+    left: .5rem;
     z-index: 1;
-    width: 24px;
-    height: 24px;
+    width: 2.4rem;
+    height: 2.4rem;
   }
   
   /* .switch:hover */.sun svg {
@@ -99,9 +103,9 @@
   }
   
   .input:focus + .slider {
-    box-shadow: 0 0 1px #183153;
+    box-shadow: 0 0 .1rem #183153;
   }
   
   .input:checked + .slider:before {
-    transform: translateX(30px);
+    transform: translateX(3rem);
   }
