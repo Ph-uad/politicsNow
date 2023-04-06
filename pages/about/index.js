@@ -1,5 +1,4 @@
 import React from 'react'
-import Featured from '../../'
 
 const index = () => {
   return (
