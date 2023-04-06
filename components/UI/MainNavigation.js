@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Nav.module.css';
@@ -12,21 +11,16 @@ const MainNavigation = () => {
   const MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 
-
   return (
     <nav>
-
       <div className={ ` ${styles["nav-container"]} flex` }>
         <div className="">
-
-          <p className="">
-            <p>{ DAY[date.getDay()] }</p>
-            <p>{ date.getDay() } { MONTH[date.getMonth()] }, { date.getFullYear() }</p>
-          </p>
+          <p>{ DAY[date.getDay()] }</p>
+          <p>{ date.getDay() } { MONTH[date.getMonth()] }, { date.getFullYear() }</p>
         </div>
 
         <Link href='/' className={ `${styles.link} link` }>
-          <Image className={ styles.logo } src="/logo.png" fill alt="logo" sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw" />
+          <Image className={ styles.logo } src="/logo.png" priority fill alt="logo" sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw" />
         </Link>
 
         <label className="switch">
@@ -48,9 +42,7 @@ const MainNavigation = () => {
         </ul>
         <form action="">
           <input type="text" placeholder='search' />
-
         </form>
-
       </div>
 
     </nav>

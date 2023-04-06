@@ -12,7 +12,8 @@ const NewsList = () => {
                 <Widget class="tile" />
                 <Widget class="tile" />
                 <Widget class="tile" />
-
+                <Widget class="tile" />
+                <Widget class="tile" />
             </ul>
         </article>
 
