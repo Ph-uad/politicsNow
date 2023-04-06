@@ -6,7 +6,7 @@ const Widget = (props) => {
         <li className={ props.class }>
             <Link href=''>
                 <div className="fill flex">
-                    <figure className="thumbnail"></figure>
+                    <figure className="thumbnail--large"></figure>
                     <div className="news-title-small ">
                         <h2>
                             Lorem ipsum dolor sit amet consectetur.

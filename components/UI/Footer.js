@@ -39,7 +39,7 @@ const Footer = () => {
           </ul>
         </section>
 
-        <p> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> 2023 PoliticsNow NG </p>
+        <p className='align-center'> &copy; 2023 PoliticsNow NG </p>
       </div>
 
      
