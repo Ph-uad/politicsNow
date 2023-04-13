@@ -1,66 +1,131 @@
 @import url('https://fonts.cdnfonts.com/css/recoleta');
-/* @import url('https://fonts.googleapis.com/css2?family=Nobile&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-                                      
 }
 
 :root {
   font-size: clamp(35%, 62.5%, 70.5%);
-  color-scheme: light dark;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+.dark {
+  background-color: #050505;
+  color: aliceblue;
+}
+
+.body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+}
+
+
+body::-webkit-scrollbar {
+  width: 5px;
+
 }
 
 /* Typography */
-h1,h2,h3,h4{  font-family: 'Recoleta', sans-serif; }
+h1,
+h2,
+h3,
+h4,.link 
+{
+  font-family: 'Recoleta', sans-serif;
+}
 
-a {
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+a, .date{
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   text-transform: uppercase;
 }
 
-p{
-  font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+.date{
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+p {
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+}
+
+li{
+  font-size: 1.4rem;
+}
+
+
+
+.section-title{
+  font-size: clamp(2rem, 3vw ,3rem);
+  text-transform: uppercase;
 }
 
 .news-title {
   font-size: clamp(1.8rem, 3vw, 3rem);
 }
+
 .news-title-small {
   font-size: clamp(1.4rem, 1.6vw, 1.6rem);
 }
 
+.text-center {
+  text-align: center;
+}
+
+
+
 /* Generic Style */
 /* Tag Styles */
-div {padding: 1rem;}
+div {
+  padding: 1rem;
+}
 
 a {
   text-decoration: none;
   color: inherit;
+
+  transition: .4s linear;
 }
 
-ul {list-style: none;}
-.fill{
+.link:active,
+.link:hover {
+  border-bottom: 1px solid #333333;
+}
+
+ul {
+  list-style: none;
+}
+
+.fill {
   height: 100%;
   object-fit: cover;
 }
+
 /* End */
 
 
 /* Utilities */
 
 
-/* For Swiper  */
-/* .swiper-pagination{
-  opacity: 0;} */
-
 /* Layout */
 .flex,
 .flex-static {
   display: flex;
- align-items: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -72,21 +137,32 @@ ul {list-style: none;}
   }
 }
 
-.flex-static{
+.flex-static {
   flex-wrap: nowrap;
 }
 
-.align-center{align-self: center;}
+.align-center {
+  align-self: center;
+}
 
-.hero{
+.hero {
   height: 50vh;
 }
 
-.tile-title {
+
+.featured_tile-title {
   text-align: right;
   place-self: end center;
   flex: 1 100%;
+}
 
+.tile {
+  margin: 2rem 0;
+  border-bottom: 1.5px solid #050505;
+}
+
+.tile:last-of-type {
+  border: none;
 }
 
 .container {
@@ -106,17 +182,18 @@ ul {list-style: none;}
 }
 
 @media (min-width:64em) {
-  .thumbnail{
+  .thumbnail {
     width: 20rem;
   }
+
   .thumbnail--large {
-    aspect-ratio: 1/0.7;
+    aspect-ratio: 1/.5;
     width: 100%;
     background: rgb(22, 22, 22);
   }
 }
 
-.article{
+.article {
   margin-top: 7rem;
 }
 
@@ -128,16 +205,65 @@ section .flex {
   align-items: center;
 }
 
-.tile{ 
-  margin: 2rem 0;
-  border-bottom: 1.5px solid #050505;
-}
+
 
 /* End */
 
 /* Component */
 
-footer .flex{
+footer .flex {
   align-items: stretch;
   justify-content: space-between;
+}
+
+.form {
+  --input-bg: #FFF;
+ /*  background of input */
+  --padding: 1.2em;
+  --rotate: 80deg;
+ /*  rotation degree of input*/
+  --gap: 2em;
+  /*  gap of items in input */
+  --height: 4.0rem;
+ /*  height */
+  width: 200px;
+  padding-inline-end: 1em;
+ /*  change this for padding in the end of input */
+  /* background: var(--input-bg); */
+  position: relative;
+  border-radius: 4px;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--height);
+}
+
+.form input {
+  width: 100%;
+  padding-inline-start: calc(var(--padding) + var(--gap));
+  outline: none;
+  border: 0;
+  padding: 1rem 3rem;
+  border-bottom:.1rem solid #333;
+  /* background: none; */
+}
+/* style for both icons -- search,close */
+.form svg {
+  color: #111;
+  transition: 0.3s cubic-bezier(.4,0,.2,1);
+  position: absolute;
+  height: 1.5rem;
+}
+/* search icon */
+.icon {
+  position: absolute;
+  left: var(--padding);
+  top: 25%;
+  transition: 0.3s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

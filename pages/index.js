@@ -30,15 +30,11 @@ export default function Home() {
           } }
           navigation={ false }
           modules={ [Autoplay, Navigation] }
-          className={`${styles.featured_tile} mySwiper`}
+          className={ `${styles.featured_tile} mySwiper` }
         >
 
-          <SwiperSlide>
-            <Featured />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Featured />
-          </SwiperSlide>
+          <SwiperSlide><Featured /></SwiperSlide>
+          <SwiperSlide><Featured /></SwiperSlide>
 
         </Swiper>
 
@@ -46,7 +42,10 @@ export default function Home() {
       </header>
       <div className="flex">
         <div className=""></div>
-        <NewsList />
+        <article className='article'>
+          <h2 className="heading-secondary">EDITORIALS</h2>
+          <NewsList />
+        </article>
         <div className=""></div>
       </div>
     </>

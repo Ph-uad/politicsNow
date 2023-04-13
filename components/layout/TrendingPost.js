@@ -6,6 +6,7 @@ const TrendingPost = () => {
     <section className={styles['trending']}>
       <h2 className="section-title">
         Trending post
+        </h2>
         <ul className="list">
           <li>
             <Link href=''>
@@ -40,7 +41,7 @@ const TrendingPost = () => {
             </Link>
           </li>
         </ul>
-      </h2>
+
     </section>
   )
 }

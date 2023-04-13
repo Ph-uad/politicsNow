@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container flex">
 
         <section>
-          <h2>Sections</h2>
+          <h2 className='heading-secondary'>Sections</h2>
           <ul>
             <li>News</li>
             <li>Plotics</li>
@@ -17,7 +17,7 @@ const Footer = () => {
         </section>
 
         <section>
-          <h2>Socials</h2>
+          <h2 className='heading-secondary'>Socials</h2>
           <ul>
             <li>Twitter</li>
             <li>Facebook</li>
@@ -27,9 +27,9 @@ const Footer = () => {
         </section>
 
         <section>
-          <h2>More info</h2>
+          <h2 className='heading-secondary'>More info</h2>
           <ul>
-            <li>About US </li>
+            <li>About us </li>
             <li>Adevertising</li>
             <li>Careers</li>
             <li>Photos</li>
@@ -39,10 +39,8 @@ const Footer = () => {
           </ul>
         </section>
 
-        <p className='align-center'> &copy; 2023 PoliticsNow NG </p>
       </div>
-
-     
+        <p className='text-center'> &copy; 2023 PoliticsNow ng </p>
     </footer>
   )
 }
