@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Nav.module.css';
-import { useEffect } from 'react';
 
 
 
@@ -11,13 +10,9 @@ const MainNavigation = () => {
   const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  useEffect(() => {
-    console.log(window.matchMedia('prefers-color-scheme : light').matches)
-
-  })
-  const changeHandler = () => {
-    document.body.classList.toggle('dark')
-  }
+  // const changeHandler = () => {
+  //   document.body.classList.toggle('dark')
+  // }
 
   return (
     <nav className=''>
@@ -31,7 +26,7 @@ const MainNavigation = () => {
         </Link>
 
 
-        <p className='date'>{ date.getUTCDate() } { MONTH[date.getMonth()] }. { date.getFullYear() }</p>Í
+        <p className='date'>{ date.getUTCDate() } { MONTH[date.getMonth()] }. { date.getFullYear() }</p>
 
       </div>
 

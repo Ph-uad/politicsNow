@@ -4,7 +4,7 @@ import React from 'react'
 const index = () => {
   return (
     <div>
-      <h2 className='heading-secondary'>Policies</h2>
+      <h2 className='heading-secondary'> /Policies</h2>
        <NewsList/>
     </div>
   )

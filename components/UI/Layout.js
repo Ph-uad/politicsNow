@@ -2,11 +2,14 @@ import React from 'react'
 import MainNavigation from './MainNavigation'
 import Footer from './Footer'
 import { Inter } from 'next/font/google'
-import Extras from '../layout/extras'
+import Extras from '../layout/Extras'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
 const Layout = (props) => {
+
+  
   return (
     <>
       <MainNavigation />

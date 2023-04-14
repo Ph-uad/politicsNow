@@ -1,7 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/recoleta');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +9,7 @@
 
 :root {
   font-size: clamp(35%, 62.5%, 70.5%);
-  color-scheme: light;
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,58 +18,60 @@
   }
 }
 
-.dark {
-  background-color: #050505;
-  color: aliceblue;
-}
-
 .body {
   font-family: 'Inter', sans-serif;
-  font-size: 1.6rem;
-}
-
-
-body::-webkit-scrollbar {
-  width: 5px;
-
+  font-size: clamp(1.5rem, 3vw, 1.6rem)
 }
 
 /* Typography */
 h1,
 h2,
 h3,
-h4,.link 
-{
+h4,
+h6,
+.link {
   font-family: 'Recoleta', sans-serif;
 }
 
 .heading-secondary {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2vw, 2rem);
   font-weight: bolder;
 }
 
-a, .date{
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+.heading-tertiary {
+  text-transform: capitalize;
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+  font-weight: bolder;
+}
+
+.heading-senery{
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: lighter;
+}
+
+a,
+.date {
+  font-size: clamp(1.4rem, 2vw, 2rem);
   text-transform: uppercase;
 }
 
-.date{
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+.date {
+  font-size: clamp(1.6rem, 3vw, 2rem);
 }
 
 p {
   font-size: clamp(1.4rem, 1.8vw, 1.8rem);
 }
 
-li{
+li {
   font-size: 1.4rem;
 }
 
 
 
-.section-title{
-  font-size: clamp(2rem, 3vw ,3rem);
+.section-title {
+  font-size: clamp(2rem, 3vw, 3rem);
   text-transform: uppercase;
 }
 
@@ -169,17 +170,7 @@ ul {
   padding: 1.6rem;
 }
 
-.thumbnail {
-  aspect-ratio: 1/0.7;
-  width: 100%;
-  background: gray;
-}
 
-.thumbnail--large {
-  aspect-ratio: 1/0.7;
-  width: 100%;
-  background: rgb(22, 22, 22);
-}
 
 @media (min-width:64em) {
   .thumbnail {
@@ -197,6 +188,12 @@ ul {
   margin-top: 7rem;
 }
 
+.editorial {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 3rem;
+}
+
 section {
   padding: 1.6rem;
 }
@@ -204,8 +201,6 @@ section {
 section .flex {
   align-items: center;
 }
-
-
 
 /* End */
 
@@ -218,17 +213,17 @@ footer .flex {
 
 .form {
   --input-bg: #FFF;
- /*  background of input */
+  /*  background of input */
   --padding: 1.2em;
   --rotate: 80deg;
- /*  rotation degree of input*/
+  /*  rotation degree of input*/
   --gap: 2em;
   /*  gap of items in input */
   --height: 4.0rem;
- /*  height */
+  /*  height */
   width: 200px;
   padding-inline-end: 1em;
- /*  change this for padding in the end of input */
+  /*  change this for padding in the end of input */
   /* background: var(--input-bg); */
   position: relative;
   border-radius: 4px;
@@ -247,23 +242,52 @@ footer .flex {
   outline: none;
   border: 0;
   padding: 1rem 3rem;
-  border-bottom:.1rem solid #333;
+  border-bottom: .1rem solid #333;
   /* background: none; */
 }
+
 /* style for both icons -- search,close */
 .form svg {
   color: #111;
-  transition: 0.3s cubic-bezier(.4,0,.2,1);
+  transition: 0.3s cubic-bezier(.4, 0, .2, 1);
   position: absolute;
   height: 1.5rem;
 }
+
 /* search icon */
 .icon {
   position: absolute;
   left: var(--padding);
   top: 25%;
-  transition: 0.3s cubic-bezier(.4,0,.2,1);
+  transition: 0.3s cubic-bezier(.4, 0, .2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* Image */
+.thumbnail {
+  width: 100%;
+  background: gray;
+}
+
+.thumbnail--large {
+  aspect-ratio: 1/0.7;
+  width: 100%;
+  background: rgb(22, 22, 22);
+}
+
+.figure-landscape,
+figure {
+  aspect-ratio: 16/9;
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }

@@ -1,7 +1,7 @@
 .featured_tile {
     aspect-ratio: 16/9;
     flex: 1 60%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .trending{

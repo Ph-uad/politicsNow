@@ -1,17 +1,21 @@
 import React from 'react'
 import Link from 'next/link';
 
-const Widget = (props) => {
+const Widget = ({ classN, title, date, image }) => {
     return (
-        <li className={ props.class }>
+        <li className={ classN }>
             <Link href=''>
                 <div className="fill flex">
-                    <figure className="thumbnail--large"></figure>
+                    <figure className="figure-landscape">
+                        <img src={ image } alt="thumbnail" className="img" />
+                    </figure>
                     <div className="news-title-small ">
-                        <h2>
-                            Lorem ipsum dolor sit amet consectetur.
-                        </h2>
-                        <p>by Sheid Kwarlovskey</p>
+                        <h3 className='heading-tertiary'>
+                            { title }
+                        </h3>
+                        <h6 className='heading-senary'>
+                            { date }
+                        </h6>
                     </div>
                 </div>
             </Link>
