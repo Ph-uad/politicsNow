@@ -185,12 +185,15 @@ ul {
 }
 
 .article {
-  margin-top: 7rem;
+  margin: 4rem auto;
+  width: 100%;
+  overflow: hidden;
 }
 
 .editorial {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 3rem;
 }
 
