@@ -1,10 +1,22 @@
+/* @media (max-width:40em) {
+    .hero {
+        flex-direction: column;
+        background: red;
+
+    }
+} */
+
 .featured_tile {
+    width: 100%;
     aspect-ratio: 16/9;
     flex: 1 60%;
     object-fit: cover;
+    background: center center/cover;
+    padding: 0;
+    color: white;
 }
 
-.trending{
-    flex: 1 30%;
+.trending {
+    flex: 1 39%;
     align-self: stretch;
 }

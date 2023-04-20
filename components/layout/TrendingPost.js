@@ -8,7 +8,7 @@ const TrendingPost = () => {
         Trending post
         </h2>
         <ul className="list">
-          <li>
+          <li className='list_item'>
             <Link href=''>
               <div className="flex-static">
                 <figure className="thumbnail"></figure>
@@ -16,7 +16,7 @@ const TrendingPost = () => {
               </div>
             </Link>
           </li>
-          <li>
+          <li className='list_item'>
             <Link href=''>
               <div className="flex-static">
                 <figure className="thumbnail"></figure>
@@ -24,7 +24,7 @@ const TrendingPost = () => {
               </div>
             </Link>
           </li>
-          <li>
+          <li className='list_item'>
             <Link href=''>
               <div className="flex-static">
                 <figure className="thumbnail"></figure>
@@ -32,7 +32,7 @@ const TrendingPost = () => {
               </div>
             </Link>
           </li>
-          <li>
+          <li className='list_item'>
             <Link href=''>
               <div className="flex-static">
                 <figure className="thumbnail"></figure>
