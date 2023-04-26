@@ -14,6 +14,7 @@ import styles from '@/styles/Hero.module.css';
 import Featured from '@/components/layout/Featured'
 import TrendingPost from '@/components/layout/TrendingPost'
 import NewsList from '@/components/news/newsList'
+import { Suspense } from "react";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -33,8 +34,8 @@ export default function Home() {
           className={ `${styles.featured_tile} mySwiper` }
         >
 
-          <SwiperSlide><Featured /></SwiperSlide>
-          <SwiperSlide><Featured /></SwiperSlide>
+          <SwiperSlide><Featured backgroundImage="./traffic.webp" headline="Chaos on the roads on a Mega city" /></SwiperSlide>
+          <SwiperSlide><Featured backgroundImage="./naira.webp" headline="New naira notes saga continues as festive period approaches" /></SwiperSlide>
 
         </Swiper>
 
@@ -44,7 +45,9 @@ export default function Home() {
         <div className=""></div>
         <article className='article'>
           <h2 className="heading-secondary">EDITORIALS</h2>
-          <NewsList />
+          <Suspense fallback={<p>Loading</p>}>
+            <NewsList />
+          </Suspense>
         </article>
         <div className=""></div>
       </div>
